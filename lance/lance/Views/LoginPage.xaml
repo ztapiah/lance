@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lance.Views.LoginPage" Title="Login"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,20,10,5">
+                <Label Text="LANDS"
+                    HorizontalOptions="Center" 
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+                <Image Source="onu" WidthRequest="200"/>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="E-mail" Grid.Row="0" Grid.Column="0"/>
+                    <Entry Keyboard="Email" Placeholder="Capture email..." Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Password" Grid.Row="1" Grid.Column="0"/>
+                    <Entry IsPassword="True" Placeholder="Capture password..." Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+                <ActivityIndicator>
+                    
+                </ActivityIndicator>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Recuerdame en este dispositivo" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Switch HorizontalOptions="End"/>
+                </StackLayout>
+                <Label Text="Olvidaste tu Password?" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Blue"/>
+                <StackLayout Margin="40,0">
+                    <Button Text="Aceptar" HeightRequest="46" BackgroundColor="Navy" TextColor="White" BorderRadius="23">
+                    </Button>
+                    <Button Text="Registrar" HeightRequest="46" BackgroundColor="Purple" TextColor="White" BorderRadius="23">
+                    </Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Image Source="facebook" WidthRequest="50"/>
+                    <Image Source="twitter" WidthRequest="50"/>
+                    <Image Source="instagram" WidthRequest="50"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
